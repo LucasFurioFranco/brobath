@@ -1,6 +1,6 @@
 (function() {
-  window.mockDB = {
-    products: {
+  window.mockDB = new function() {
+    var products: {
       "1": {
         "id": "1",
         "name": "Pato de Borracha",
@@ -72,6 +72,17 @@
         "name": "Privada Ecológica",
         "price": 243.4,
         "alvailable": "true"
+      }
+    }
+  }
+
+  return {
+    api: {
+      getHomeProducts: function() {
+        console.log("Home Products");
+      },
+      getDetailsProduct: function(id) {
+        console.log("Details Product");
       }
     }
   }
