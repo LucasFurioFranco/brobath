@@ -82,7 +82,8 @@
         console.log("Home Products");
       },
       getDetailsProduct: function(id) {
-        console.log("Details Product");
+        console.log("Details Product", product[id]);
+        return product[id];
       }
     }
   }
