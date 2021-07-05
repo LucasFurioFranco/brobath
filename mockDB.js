@@ -1,5 +1,6 @@
 (function() {
   window.mockDB = new function() {
+    
     var products = {
       "1": {
         "id": "1",
