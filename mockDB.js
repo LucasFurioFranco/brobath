@@ -75,17 +75,17 @@
         "alvailable": "true"
       }
     }
-  }
 
-  return {
-    api: {
-      getHomeProducts: function() {
-        console.log("Home Products");
-      },
-      getDetailsProduct: function(id) {
-        console.log("Details Product", product[id]);
-        return product[id];
+    return {
+      api: {
+        getHomeProducts: function() {
+          console.log("Home Products");
+        },
+        getDetailsProduct: function(id) {
+          console.log("Details Product", product[id]);
+          return product[id];
+        }
       }
     }
-  }
+  }()
 })()
