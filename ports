@@ -2,3 +2,4 @@ db:    5000
 api:   5001
 www:   5002
 react: 5003
+nginx: 5005
