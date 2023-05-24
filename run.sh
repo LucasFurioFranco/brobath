@@ -21,8 +21,12 @@ docker build -t brobath_nginx .
 #docker run --name brobath-nginx --publish 5005:80 brobath_nginx
 
 #To run naming it and on background:
-echo "Running: docker run --name brobath-nginx -d --publish 5002:5002 brobath_nginx"
-docker run --name brobath-nginx -d --publish 5005:80 brobath_nginx
+#echo "Running: docker run --name brobath-nginx -d --publish 5002:5002 brobath_nginx"
+#docker run --name brobath-nginx -d --publish 5005:80 brobath_nginx
+
+#To run naming it and on background and making it possible to run docker inside:
+echo "Running: docker run --name brobath-nginx -d --publish 5005:80 -v /var/run/docker.sock:/var/run/docker.sock brobath_nginx"
+docker run --name brobath-nginx -d --publish 5005:80 -v /var/run/docker.sock:/var/run/docker.sock brobath_nginx
 
 #Prints the status of the running containers after deploying this one!
 echo "Running: docker ps"

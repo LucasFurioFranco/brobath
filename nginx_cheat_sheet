@@ -1,0 +1,15 @@
+#https://nginx.org/en/docs/beginners_guide.html
+
+#For gracefuly stopping nginx
+nginx -s quit
+
+#For abruptaly closing the fucking nginx
+nginx -s stop
+
+#For re-runing the nginx after quit or stop
+sudo systemctl restart nginx
+
+#For "restarting" nginx so changes are applied
+nginx -s reload
+
+

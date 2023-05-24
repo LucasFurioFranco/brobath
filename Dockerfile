@@ -1,4 +1,5 @@
 FROM nginx:latest
+#FROM docker:latest
 
 RUN mkdir -p /app
 
