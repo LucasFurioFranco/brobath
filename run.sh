@@ -4,6 +4,26 @@
 #have phun!
 
 
+#creates our temp directory and clones the required repositories to it, then renames them
+#Dockerfile will expect the correct names to each one of the containers
+
+rm temp -r
+mkdir temp
+cd temp
+
+git clone https://github.com/LucasFurioFranco/brobath_api.git
+mv brobath_api api
+
+git clone https://github.com/LucasFurioFranco/brobath_www.git
+mv brobath_www www
+
+git clone https://github.com/LucasFurioFranco/brobath_react.git
+mv brobath_react react
+
+git clone https://github.com/LucasFurioFranco/brobath_db.git
+mv brobath_db db
+
+
 #Stops the currently runing container, if there is one
 echo "Running: docker stop brobath-docker"
 docker stop brobath-docker

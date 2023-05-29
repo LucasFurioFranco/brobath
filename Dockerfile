@@ -3,34 +3,35 @@ FROM docker:dind
 
 #Parent directory
 RUN mkdir -p /app
+WORKDIR /app
+
 
 #Data Base directory
-RUN mkdir -p /app/db
-
+#RUN mkdir -p /db
+#COPY ./temp/db. ./db
 
 #API directory
-RUN mkdir -p /app/api
-#COPY . /app/
-#COPY ./api/index.js /app/api/
-#COPY ./api/Dockerfile /app/api/
-#COPY ./api/run.sh /app/api/
-#RUN /app/api/run.sh
+#RUN mkdir -p /api
+#COPY ./temp/api ./api
 
 
 #WWW (bit pure) directory
-RUN mkdir -p /app/www
+#RUN mkdir -p /app/www
+#COPY ./temp/www ./www
 
 
 #React directory
-RUN mkdir -p /app/react
+#RUN mkdir -p /app/react
+#COPY ./temp/react ./react
 
 
-
-
-COPY internal_run.sh /app
-
-WORKDIR /app
+#COPY internal_run.sh /
 
 #RUN ./internal_run.sh
 
+#EXPOSE 5000
+#EXPOSE 5001
+#EXPOSE 5002
+#EXPOSE 5003
+#EXPOSE 5004
 EXPOSE 5005
