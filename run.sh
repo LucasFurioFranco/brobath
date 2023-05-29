@@ -4,6 +4,9 @@
 #have phun!
 
 
+#Not phun fact: this is running on "Alpine", which is a pain in the bumbum for me right now
+
+
 #creates our temp directory and clones the required repositories to it, then renames them
 #Dockerfile will expect the correct names to each one of the containers
 
@@ -30,8 +33,8 @@ echo "Running: docker build -t brobath_docker ."
 docker build -t brobath_docker .
 
 #To run naming it and on background and making it possible to run docker inside:
-echo "Running: docker docker run --privileged -d --name brobath-docker brobath_docker"
-docker run --privileged -d --name brobath-docker brobath_docker
+echo "Running: docker run --privileged -p 5005:80 -d --name brobath-docker brobath_docker"
+docker run --privileged -p 5005:80 -d --name brobath-docker brobath_docker
 
 #Prints the status of the running containers after deploying this one!
 echo "Running: docker ps"
