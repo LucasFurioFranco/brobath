@@ -9,19 +9,11 @@
 
 rm temp -r
 mkdir temp
-cd temp
 
-git clone https://github.com/LucasFurioFranco/brobath_api.git
-mv brobath_api api
-
-git clone https://github.com/LucasFurioFranco/brobath_www.git
-mv brobath_www www
-
-git clone https://github.com/LucasFurioFranco/brobath_react.git
-mv brobath_react react
-
-git clone https://github.com/LucasFurioFranco/brobath_db.git
-mv brobath_db db
+git clone https://github.com/LucasFurioFranco/brobath_api.git ./temp/api
+git clone https://github.com/LucasFurioFranco/brobath_www.git ./temp/www
+git clone https://github.com/LucasFurioFranco/brobath_react.git ./temp/react
+git clone https://github.com/LucasFurioFranco/brobath_db.git ./temp/db
 
 
 #Stops the currently runing container, if there is one
